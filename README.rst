@@ -26,14 +26,14 @@ Establish a connection to MetaSmoke and retreive some posts that have been marke
 ::
 
     from smokeapi import SmokeAPI
-    SITE = SmokeAPI('stackoverflow')
-    comments = SITE.fetch('comments')
+    SMOKE = SmokeAPI('your_api_key')
+    posts = SMOKE.fetch('posts/feedback', type="naa-")
 
 The above, will issue a call to the
-|comments|_. end point on Stack Overflow.
+|Posts Feedback|_. end point on MetaSmoke.
 
-.. |comments| replace:: ``comments``
-.. _comments: http://api.stackexchange.com/docs/comments
+.. |Posts Feedback| replace:: ``Posts Feedback``
+.. _comments: https://github.com/Charcoal-SE/metasmoke/wiki/Posts-by-Feedback
 
 Much more detailed documentation is available on
 `ReadTheDocs <http://smokeapi.readthedocs.io/>`__.

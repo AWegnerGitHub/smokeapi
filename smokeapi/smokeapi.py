@@ -25,7 +25,7 @@ class SmokeAPI(object):
             The object used to interact with the MetaSmoke API
 
             :param key: (string) **(Required)** A valid API key. An API key can be received by following the
-                current instructions in the MetaSmoke API Documentation: https://github.com/Charcoal-SE/metasmoke/wiki/API-Documentation
+                current instructions in the `API Documentation <https://github.com/Charcoal-SE/metasmoke/wiki/API-Documentation>`__.
             :param proxy: (dict) (optional) A dictionary of http and https proxy locations
                 Example:
 
@@ -35,9 +35,9 @@ class SmokeAPI(object):
                      'https': 'https://example.com'}
 
                 By default, this is ``None``.
-            :param max_pages: (int) (optional) The maximum number of pages to retrieve (Default: ``100``)
+            :param max_pages: (int) (optional) The maximum number of pages to retrieve (Default: ``5``)
             :param per_page: (int) (optional) The number of elements per page. The API limits this to
-                a maximum of 100 items on all end points
+                a maximum of 100 items on all end points (Default: ``100``)
 
             :param access_token: (string) (optional) An access token associated with an application and
                 a user, to grant more permissions (such as write access)
@@ -69,7 +69,7 @@ class SmokeAPI(object):
             dictionary.
 
             :param endpoint: (string) The API end point being called. Available endpoints are listed on
-                the official API documentation: https://github.com/Charcoal-SE/metasmoke/wiki/API-Documentation
+                the official `API Documentation <https://github.com/Charcoal-SE/metasmoke/wiki/API-Documentation>`__.
 
                 This can be as simple as ``fetch('posts/feedback')``, to call feedback end point
 
