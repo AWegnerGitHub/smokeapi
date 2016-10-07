@@ -5,7 +5,7 @@ This is a Python wrapper for the `MetaSmoke API <https://github.com/Charcoal-SE/
   :alt: Build Status
 
 .. image:: https://readthedocs.org/projects/smokeapi/badge/?version=latest
-  :target: http://smokeapi.readthedocs.io/en/latest/?badge=latest
+  :target: https://readthedocs.org/projects/smokeapi/badge/
   :alt: Documentation Status
 
 This library has support for:
