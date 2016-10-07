@@ -20,8 +20,8 @@ This library has support for:
 Example usage:
 ==============
 
-Establish a connection to MetaSmoke and retreive some posts that have been marked "Not an answer"
--------------------------------------------------------------------------------------------------
+Connect to MetaSmoke and gather posts that have been marked "Not an answer"
+---------------------------------------------------------------------------
 
 ::
 
@@ -30,10 +30,10 @@ Establish a connection to MetaSmoke and retreive some posts that have been marke
     posts = SMOKE.fetch('posts/feedback', type="naa-")
 
 The above, will issue a call to the
-|Posts Feedback|_. end point on MetaSmoke.
+|PostsFeedback|_. end point on MetaSmoke.
 
-.. |Posts Feedback| replace:: ``Posts Feedback``
-.. _comments: https://github.com/Charcoal-SE/metasmoke/wiki/Posts-by-Feedback
+.. |PostsFeedback| replace:: ``Posts Feedback``
+.. _PostsFeedback: https://github.com/Charcoal-SE/metasmoke/wiki/Posts-by-Feedback
 
 Much more detailed documentation is available on
 `ReadTheDocs <http://smokeapi.readthedocs.io/>`__.
