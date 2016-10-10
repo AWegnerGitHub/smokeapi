@@ -121,7 +121,7 @@ class SmokeAPI(object):
         # If this is the case, then convert to a string and assume this goes at the end of the endpoint
 
         if 'ids' in kwargs:
-            ids = ';'.join(str(x) for x in ids)
+            ids = ';'.join(str(x) for x in kwargs['ids'])
             kwargs.pop('ids', None)
             endpoint += "/{}".format(ids)
 
