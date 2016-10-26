@@ -42,8 +42,6 @@ class SmokeAPI(object):
             :param per_page: (int) (optional) The number of elements per page. The API limits this to
                 a maximum of 100 items on all end points (Default: ``100``)
 
-            :param access_token: (string) (optional) An access token associated with an application and
-                a user, to grant more permissions (such as write access)
             """
         if not key:
             raise ValueError('No API Key provided. This is required for all MetaSmoke API routes.')
