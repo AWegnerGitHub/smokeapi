@@ -66,8 +66,8 @@ Let's walk through a few examples::
 
 This will return up to 100 results. However, it will hit the API up to 10 times.
 
-    >>> SITE.SMOKE = 100
-    >>> SITE.max_pages = 1
+    >>> SMOKE.per_page = 100
+    >>> SMOKE.max_pages = 1
 
 This will result up to 100 results as well, but it will only hit the API
 one time.
@@ -75,8 +75,8 @@ one time.
 MetaSmoke limits the number of results per page to 100. If you want more
 than 100 results, you need to increase the ``max_pages``.
 
-    >>> SITE.per_page = 100
-    >>> SITE.max_pages = 2
+    >>> SMOKE.per_page = 100
+    >>> SMOKE.max_pages = 2
 
 This will return up to 200 results and hit the API up to twice.
 
@@ -88,14 +88,14 @@ Getting exact number of results
 If you want a specific number of results, but no more than that, you need to
 perform some manipulations of these two values.
 
-    >>> SITE.per_page = 50
-    >>> SITE.max_pages = 3
+    >>> SMOKE.per_page = 50
+    >>> SMOKE.max_pages = 3
 
 This will return up to 150 results. It will also hit the API 3 times to get
 these results. You can save an API hit by changing the values to::
 
-    >>> SITE.per_page = 75
-    >>> SITE.max_pages = 2
+    >>> SMOKE.per_page = 75
+    >>> SMOKE.max_pages = 2
 
 This will also return up to 150 results, but do so in only 2 API hits.
 
