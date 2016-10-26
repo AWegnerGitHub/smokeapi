@@ -21,9 +21,7 @@ Retrieving data is very simple. First, though, you will need an
 `API Key <https://github.com/Charcoal-SE/metasmoke/wiki/API-Documentation#getting-started>`__.
 This key will be used every place you see the variable ``your_api_key``.
 
-**Note:** Do not hard code this key into your code. Your key will perform all actions against your account. If you
-have write access, this can be very bad. Instead, store it either in a file that isn't in your source code repository
-or in an environment variable.
+**Note:** This is an API *key*. It is a unique identifier for your application. It's not a disaster if you end up sharing it with other people unintentionally, but generally try to keep it protected. When you start making use of write capabilities, you'll be issued with API *tokens* that provide authorization on an app-user-pair basis; these tokens are sensitive information and should be protected no matter what.
 
 First, import the SmokeAPI module::
 
