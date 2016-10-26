@@ -74,6 +74,9 @@ When contributing code, you'll want to follow this checklist:
 Running Tests
 ~~~~~~~~~~~~~
 
+**Note**: While this note exists, there are **NO** unit tests. This is a known
+limitation and will be corrected at some point in the future.
+
 To be able to run the test suite, you'll need to have `mock`_ installed. Mock is
 on the Python Package Index, so you can install it simply with one command::
 

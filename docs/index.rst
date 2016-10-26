@@ -23,7 +23,7 @@ The above, will issue a call to the
 Supported Features
 ------------------
 
--  Read and (soon) write functionality via the API.
+-  Read and write functionality via the API.
 -  Retrieve multiple pages of results with a single call and merge
    all the results into a single response.
 -  Throw exceptions returned by the API for easier troubleshooting.
