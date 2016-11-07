@@ -117,10 +117,10 @@ The exception has several values available to help troubleshoot the underlying
 issue::
 
     except smokeapi.SmokeAPIError as e:
-        print("   Error URL: %s" % (e.url))
-        print("   Error Code: %s" % (e.error_code))
-        print("   Error Name: %s" % (e.error_name))
-        print("   Error Message: %s" % (e.error_message))
+        print("   Error URL: {}".format(e.url))
+        print("   Error Code: {}".format(e.error_code))
+        print("   Error Name: {}".format(e.error_name))
+        print("   Error Message: {}".format(e.error_message))
 
 This will print out the URL that was being accessed, the error code that the
 API returns, the error name the API returns and the error message the API

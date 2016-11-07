@@ -71,4 +71,4 @@ portion of the documentation.
    dev/authors
 
 
-
+.. include:: ../HISTORY.rst
