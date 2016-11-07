@@ -149,3 +149,37 @@ Let's create an example using all of these. This should return a list of posts
 created between October 28, 2016 and October 29, 2016 that have a feedback type of
 ``naa-`` and were on Stack Overflow.
 
+In this example, notice that we are passing a datetime object and not the expected
+UNIX timestamp representation. SmokeAPI handles the conversion for you automatically.
+
+    >>> from smokeapi import SmokeAPI
+    >>> import datetime
+    >>> SMOKE = SmokeAPI('your_api_key')
+    >>> end = datetime.datetime(2016, 10, 29)
+    >>> start = datetime.datetime(2016, 10, 28)
+    >>> feedbacktype = "naa-"
+    >>> site = "stackoverflow.com"
+    >>> posts = SMOKE.fetch('posts/search', from_date=start, to_date=end, feedback_type=feedbacktype, site=site)
+    >>> posts
+    {   'has_more': False,
+    'items': [   {   u'body': <trimmed>,
+                     u'created_at': u'2016-10-28T04:11:30.000Z',
+                     u'downvote_count': None,
+                     u'id': 44960,
+                     u'is_fp': False,
+                     u'is_naa': True,
+                     u'is_tp': False,
+                     u'link': u'//stackoverflow.com/a/40297916',
+                     u'post_creation_date': None,
+                     u'score': None,
+                     u'site_id': 1,
+                     u'stack_exchange_user_id': 38004,
+                     u'title': u'Does LINQ have any easy/elegant way to take the first element and put it at the end?',
+                     u'updated_at': u'2016-10-29T16:38:31.000Z',
+                     u'upvote_count': None,
+                     u'user_link': u'//stackoverflow.com/u/7083522',
+                     u'user_reputation': 1,
+                     u'username': u'HuangKai',
+                     u'why': u'Post - Text contains 24 non-Latin characters out of 26'}],
+    'page': 1,
+    'total': 1}
