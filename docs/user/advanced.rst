@@ -122,3 +122,30 @@ when creating the :class:`SmokeAPI <smokeapi.SmokeAPI>` class::
 The two important lines are where ``proxies`` is defined and the
 modified :class:`SmokeAPI <smokeapi.SmokeAPI>` initialization, which passes the
 ``proxies`` dictionary to the ``proxy`` argument.
+
+
+.. _more-parameters-fetch:
+
+Calling ``fetch`` with various API parameters
+---------------------------------------------
+
+Some end points take multiple arguments to help filter the number of results you return. SmokeAPI
+will accept all of these as parameters.
+
+As an example, lets look at the `search <https://github.com/Charcoal-SE/metasmoke/wiki/Search-Posts>`__
+end point. This end point will accept the following parameters:
+
+- feedback_type
+- from_date
+- to_date
+- site
+
+``page`` and ``per_page`` are handled by SmokeAPI through usage of the
+``max_pages`` and ``per_page`` values of the :class:`SmokeAPI <smokeapi.SmokeAPI>`
+class. The others, are part of the ``kwargs`` accepted by
+:meth:`fetch <smokeapi.SmokeAPI.fetch>`.
+
+Let's create an example using all of these. This should return a list of posts
+created between October 28, 2016 and October 29, 2016 that have a feedback type of
+``naa-`` and were on Stack Overflow.
+

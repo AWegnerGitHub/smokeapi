@@ -1,5 +1,7 @@
 import requests
 from itertools import chain
+import datetime
+import calendar
 
 
 class SmokeAPIError(Exception):
@@ -113,6 +115,12 @@ class SmokeAPI(object):
             if "{" + k + "}" in endpoint:
                 endpoint = endpoint.replace("{" + k + "}", ';'.join(str(x) for x in value))
                 kwargs.pop(k, None)
+
+        date_time_keys = ['from_date', 'to_date']
+        for k in date_time_keys:
+            if k in kwargs:
+                if isinstance(kwargs[k], datetime.datetime):
+                    kwargs[k] = int(calendar.timegm(kwargs[k].utctimetuple()))
 
         # This block will see if there there are ids remaining
         # This would occur if the developer passed `posts` instead of `posts/{ids}` to `fetch`
