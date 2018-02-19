@@ -175,7 +175,8 @@ class SmokeAPI(object):
         for d in data:
             r.extend(d['items'])
         items = list(chain(r))
-        result = {'has_more': data[-1]['has_more'],
+        has_more = data[-1]['has_more'] if 'has_more' in data[-1] else False
+        result = {'has_more': has_more,
                   'page': params['page'],
                   'total': len(items),
                   'items': items}
